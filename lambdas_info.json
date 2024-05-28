@@ -1,0 +1,74 @@
+[
+    [
+        "ModLabRole",
+        "index.lambda_handler",
+        "python3.8",
+        "arn:aws:iam::493048853935:role/RoleForLambdaModLabRole",
+        1544,
+        "updates LabRole to allow it to assume itself"
+    ],
+    [
+        "RedshiftOverwatch",
+        "index.lambda_handler",
+        "python3.8",
+        "arn:aws:iam::493048853935:role/RedshiftRole",
+        845,
+        "Deletes Redshift Cluster if the count is more than 2."
+    ],
+    [
+        "addTweetDynamo",
+        "lambda_function.lambda_handler",
+        "python3.12",
+        "arn:aws:iam::493048853935:role/LabRole",
+        599,
+        ""
+    ],
+    [
+        "RedshiftEventSubscription",
+        "index.lambda_handler",
+        "python3.8",
+        "arn:aws:iam::493048853935:role/RedshiftRole",
+        1105,
+        "Create Redshift event subscription to SNS Topic."
+    ],
+    [
+        "MainMonitoringFunction",
+        "index.lambda_handler",
+        "python3.8",
+        "arn:aws:iam::493048853935:role/LabRole",
+        686,
+        ""
+    ],
+    [
+        "RoleCreationFunction",
+        "index.lambda_handler",
+        "python3.8",
+        "arn:aws:iam::493048853935:role/c112592a2670371l6159375t1w493048853935-LambdaSLRRole-WwPIgqVkitbP",
+        1597,
+        "Create SLR if absent"
+    ],
+    [
+        "update-Dbs",
+        "lambda_function.lambda_handler",
+        "python3.12",
+        "arn:aws:iam::493048853935:role/LabRole",
+        717,
+        ""
+    ],
+    [
+        "getRawTweets",
+        "lambda_function.lambda_handler",
+        "python3.12",
+        "arn:aws:iam::493048853935:role/LabRole",
+        500,
+        ""
+    ],
+    [
+        "consult-db",
+        "lambda_function.lambda_handler",
+        "python3.12",
+        "arn:aws:iam::493048853935:role/LabRole",
+        730,
+        ""
+    ]
+]

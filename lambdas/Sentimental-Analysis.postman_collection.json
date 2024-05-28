@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "7f33a5fe-2a6c-4778-a3bb-92b015b08c01",
+		"name": "Sentimental-Analysis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20702721"
+	},
+	"item": [
+		{
+			"name": "add_tweet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subject\" : \"NATO\",\n    \"user\" : \"VladimirPoutine\",\n    \"text\" :\"I love war\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://95w8sc9vl2.execute-api.us-east-1.amazonaws.com/add_tweet"
+			},
+			"response": []
+		},
+		{
+			"name": "raw_tweets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://95w8sc9vl2.execute-api.us-east-1.amazonaws.com/tweets_raw"
+			},
+			"response": []
+		},
+		{
+			"name": "updatedb",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"subject\": \"NATO\",\n        \"user\": \"VladimirPoutine\",\n        \"text\": \"I hate russia\",\n        \"id\": \"6d2a7355-c639-42f1-ba4d-0a1940a2dcd1\"\n    },\n    {\n        \"subject\": \"NATO\",\n        \"user\": \"VladimirPoutine\",\n        \"text\": \"I hate russia 3\",\n        \"id\": \"edaa3448-68e1-4966-9800-c8cd6f796060\"\n    },\n    {\n        \"subject\": \"NATO\",\n        \"user\": \"VladimirPoutine\",\n        \"text\": \"I hate russia\",\n        \"id\": \"48370dcf-9d52-4244-ae55-418bef60c2cc\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://95w8sc9vl2.execute-api.us-east-1.amazonaws.com/update_db"
+			},
+			"response": []
+		},
+		{
+			"name": "raw_tweets Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"word\":\"ukraine\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://95w8sc9vl2.execute-api.us-east-1.amazonaws.com/consult-db"
+			},
+			"response": []
+		}
+	]
+}
